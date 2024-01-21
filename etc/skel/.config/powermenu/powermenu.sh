@@ -5,13 +5,10 @@
 #
 ## Rofi   : Power Menu
 #
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
 
 # Current Theme
 dir="$HOME/.config/powermenu/"
-theme='style-1'
+theme='style-default'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -92,7 +89,8 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		i3lock-fancy
+		# sudo pacman -S i3lock-fancy-dualmonitors-git
+		i3lock-fancy-dualmonitor
         ;;
     $suspend)
 		run_cmd --suspend
