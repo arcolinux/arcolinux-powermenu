@@ -76,6 +76,9 @@ run_cmd() {
 			desktop=$(echo  $DESKTOP_SESSION)
 			echo "You are on "$desktop
 			case $desktop in
+				dk)
+					dkcmd exit
+					;;
 				hyprland)
 					hyprctl dispatch exit
 					;;
